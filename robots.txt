@@ -1,0 +1,6 @@
+# updated to allow indexing
+
+User-agent: *
+Allow: /
+
+Sitemap: https://strengthawa.surge.sh/sitemap.xml

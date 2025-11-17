@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+
+
+<body class="dark">
+
+<!-- ***** Main Contaniner Start ***** -->
+    <main class="main-container">
+        <!-- ***** Main Content Start ***** -->
+        <div class="main-content">
+            <!-- ***** Contact Section Start ***** -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
+                    <h4 class="contact-sub-title padd-15" >I'M AT YOUR SERVICE</h4>
+                    <div class="row">
+                        <!-- **** Contact info item start ***** -->
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4>Call Us On</h4>
+                            <p>+237 658 195 564</p>
+                        </div>
+                        <!-- **** Contact info item end ***** -->
+                            <!-- **** Contact info item start ***** -->
+                            <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <h4>Office</h4>
+                            <p>Bafoussam</p>
+                        </div>
+                        <!-- **** Contact info item end ***** -->
+                            <!-- **** Contact info item start ***** -->
+                            <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4>Email</h4>
+                            <p><a href="#goto-email">awapenn17@gmail.com</a></p> 
+                        </div>
+                        <!-- **** Contact info item end ***** -->
+                            <!-- **** Contact info item start ***** -->
+                            <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                            <h4>Website</h4>
+                            <p><a href="http://strengthawa.surge.sh">www.strengthawa.surge.sh</a></p>
+                        </div>
+                        <!-- **** Contact info item end ***** -->
+                    </div>
+                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+                    <h4 class="contact-sub-title padd-15" id="goto-email">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                    <!-- ***** Contact Form ***** -->
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name" id="name" required>
+                                        <div id="nameError" class="error-message padd-15" style="display: none;">This is a required field!</div>
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <form id="email-form">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email" id="email" required>
+                                            <div id="emailError" class="error-message padd-15" style="display: none;">This is a required field!</div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="subject" id="subject" required>
+                                        <div id="subjectError" class="error-message padd-15" style="display: none;">This is a required field!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" placeholder="MESSAGE: Please include your WhatsApp phone number in your message" required></textarea>
+                                        <div id="messageError" class="error-message padd-15" style="display: none;">This is a required field!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn" id="submit-btn" disabled>
+                                            <div class="loading hide"></div>
+                                            <span>Send Message</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- ***** Contact Section End ***** -->
+        </div>
+        <!-- ***** Main Content End ***** -->
+    </main>
+<!-- ***** Main Contaniner End ***** -->
+
+<div class="hide cover"></div>
+<!-- Pop up loading message start -->
+ <div class="con hide">
+    <h4 id="status">SUCCESS</h4>
+    <div id="message-box">
+        <img src="icons/tic.png" alt="submit message">
+        <p id="load-message">Your message was submitted. <br>Check your email!</p>
+    </div>
+    <div class="btn1 ok">Ok</div>
+</div>
+<!-- Pop up loading message end -->
+
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "ciG9LGAiuO5XXofoB"
+            });
+        })();
+    </script>
+
+    <script src="js/global-UI-components.js"></script>
+    <script src="js/contact.js" defer></script>
+    <style>
+    .loading {
+        width: 2px;
+        height: 2px;
+        position: relative;
+        padding: 2px;
+        transform: translateY(-265%);
+    }
+
+    .bar {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: var(--text-black-901);
+        transform-origin: center 15px;   /* important fix */
+        animation: fade 1.2s linear infinite;
+    }
+
+    @keyframes fade {
+        0% { opacity: 1; }
+        100% { opacity: 0.1; }
+    }
+    </style>
+    <script>
+    const container = document.querySelector('.loading');
+    const submitBtn = document.querySelector('#submit-btn');
+
+    (function showLoadingBar()
+    {
+        submitBtn.addEventListener("click", () => {
+            container.classList.remove('hide');
+            document.querySelector('.cover').classList.remove('hide');
+            document.querySelector('#submit-btn span')
+            .textContent = ``;
+        })
+    })();
+    function hideLoadingBar()
+    {
+        container.classList.add('hide');
+        document.querySelector('.cover').classList.add('hide');
+        document.querySelector('#submit-btn span')
+        .textContent = `Send Message`;
+    }
+
+    // Number of bars
+    const total = 7;
+
+    for (let i = 0; i < total; i++) {
+        const bar = document.createElement('div');
+        bar.classList.add('bar');
+
+        bar.style.transform = `rotate(${(360 / total) * i}deg)`;
+        bar.style.animationDelay = `${i * 0.2}s`;
+
+        container.appendChild(bar);
+    }
+    </script>
+    <script>
+    const messageCon = document.querySelector('.con');
+    const okBtn = document.querySelector('.ok');
+
+    //submitBtn.addEventListener("click", showStatus);
+    okBtn.addEventListener("click", hideStatus);
+    let timeOutId;
+    
+    function showStatus() {
+        messageCon.classList.remove('hide');
+        messageCon.classList.add('in');
+        clearTimeout(timeOutId);
+        timeOutId = setTimeout(hideStatus, 10000)
+    }
+
+    function hideStatus() {
+        messageCon.classList.add('hide');
+        messageCon.classList.remove('in');
+    }
+
+    function showError() {
+        const status = document.querySelector('#status');
+        const message = document.querySelector('#load-message');
+        const errorImg = document.querySelector('#message-box img');
+
+        status.textContent = "Error";
+        errorImg.src = "icons/error.png";
+        message.innerHTML = `Sorry, your message was not sent. <br>Check your connection and try again!`;
+    }
+    //showError();
+    </script>
+</body>
+</html>

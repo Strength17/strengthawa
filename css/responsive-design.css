@@ -1,0 +1,243 @@
+@media (max-width: 1199px)
+{
+    .aside
+    {
+        left: calc(var(--aside-width)*-1);
+    }
+    .main-content
+    {
+        padding-left: 0;
+    }
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+    .aside .nav-toggler {
+        display: flex;
+    }
+    .aside .logo a
+    {
+        font-weight: 500;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    .aside .logo a span
+    {
+        font-size: 60px;
+    }
+    .aside .nav li a{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .aside .nav{
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 1070px)
+{
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width:890px)
+{
+
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+
+@media (max-width:798px)
+{
+
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .aside .logo
+    {
+        position: absolute;
+        top: 50px;
+    }
+    .aside .logo a
+    {
+        font-weight: 500;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    .aside .logo a span
+    {
+        font-size: 60px;
+    }
+    .aside .nav li a{
+        font-size: 14px;
+        font-weight: 300;
+       
+    }
+    .footer-container
+    {
+        padding: 25px 0px;
+    }
+}
+@media (max-width: 538px)
+{
+    .about .about-content .personal-info .info-item:nth-child(4) p span ,
+    .about .about-content .personal-info .info-item:nth-child(3) p span 
+    {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 524px)
+{
+    .footer-container
+    {
+        font-size: 7px;
+    }
+}
+@media (max-width: 460px)
+{
+    .about .about-content .personal-info .info-item:nth-child(4) p span ,
+    .about .about-content .personal-info .info-item:nth-child(3) p span 
+    {
+        font-size: 12px;
+    }
+    .aside
+    {
+        --aside-width: 210px;
+        width: var(--aside-width);
+    } 
+    .aside .nav-toggler {
+        left: calc(var(--aside-width) + 1.6rem);
+    }
+}
+@media (max-width: 404px)
+{
+    .about .about-content .personal-info .info-item:nth-child(4) p span ,
+    .about .about-content .personal-info .info-item:nth-child(3) p span 
+    {
+
+        font-size: 10px;
+    }
+}
+@media (max-width: 340px)
+{
+    .about .about-content .personal-info .info-item:nth-child(4) p span ,
+    .about .about-content .personal-info .info-item:nth-child(3) p span 
+    {
+
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 547px)
+{
+    .footer-container
+    {
+        font-size: 15px;
+        text-align: center;
+        word-spacing: 2px;
+    }
+}
+@media (max-width: 482px)
+{
+    .footer-container
+    {
+        font-size: 15px;
+        letter-spacing: 0px;
+        word-spacing: 1px;
+    }
+    .aside .logo a
+    {
+        font-size: 16px;
+    }
+}
+@media (max-width: 435px)
+{
+    .footer-container
+    {
+       text-align: center;
+    }
+}
+
+
+/*Pop up loading message*/
+@media screen and (max-width: 1030px) {
+    #status {
+        font-size: 16px;
+    }
+    #load-message {
+        font-size: 13px;
+    }
+    #message-box img{
+        width: 35px;
+        height: 35px;
+    }
+    .btn1 {
+        padding: 4px;
+    }
+}
+@media screen and (max-width: 1000px)
+{
+    .con {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 669px)
+{
+    .con {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .con {
+        width: 65%;
+    }
+    #status {
+        font-size: 14px;
+    }
+    #load-message {
+        font-size: 12px;
+    }
+    #message-box img{
+        width: 30px;
+        height: 30px;
+    }
+    .btn1 {
+        padding: 2px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    #status {
+        font-size: 12px;
+    }
+    #load-message {
+        font-size: 10px;
+    }
+    .con {
+        width: 25%;
+    }
+}
