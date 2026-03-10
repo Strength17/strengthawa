@@ -150,9 +150,10 @@ function clearInputs() {
 // SUBMIT HANDLER
 // ==========================================
 submitButton.addEventListener("click", function () {
+	showLoadingBar();
 
     const params = getValues();
-
+	
     console.log("Sending Message...", params);
 
     // Example (replace with emailJS)
