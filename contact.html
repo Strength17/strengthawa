@@ -149,7 +149,7 @@
         position: absolute;
         top: 0;
         left: 50%;
-        width: 4px;
+        width: 2px;
         height: 10px;
         border-radius: 5px;
         background-color: var(--text-black-901);
@@ -159,24 +159,24 @@
 
     @keyframes fade {
         0% { opacity: 1; }
-        100% { opacity: 0.1; }
+        100% { opacity: 0.09; }
     }
     </style>
     <script>
     const container = document.querySelector('.loading');
     const submitBtn = document.querySelector('#submit-btn');
 
-    (function showLoadingBar()
+    function showLoadingBar()
     {
-        submitBtn.addEventListener("click", () => {
-            container.classList.remove('hide');
-            document.querySelector('.cover').classList.remove('hide');
-            document.querySelector('#submit-btn span')
-            .textContent = ``;
-        })
-    })();
+		submitBtn.disabled = false;
+		container.classList.remove('hide');
+		document.querySelector('.cover').classList.remove('hide');
+		document.querySelector('#submit-btn span')
+		.textContent = ``;
+    }
     function hideLoadingBar()
     {
+		submitBtn.disabled = false;
         container.classList.add('hide');
         document.querySelector('.cover').classList.add('hide');
         document.querySelector('#submit-btn span')
@@ -184,7 +184,7 @@
     }
 
     // Number of bars
-    const total = 7;
+    const total = 12;
 
     for (let i = 0; i < total; i++) {
         const bar = document.createElement('div');
@@ -208,7 +208,7 @@
         messageCon.classList.remove('hide');
         messageCon.classList.add('in');
         clearTimeout(timeOutId);
-        timeOutId = setTimeout(hideStatus, 10000)
+        timeOutId = setTimeout(hideStatus, 5000)
     }
 
     function hideStatus() {
